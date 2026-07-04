@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: "Inter", system-ui, sans-serif;
+  --font-playfair: "Playfair Display", Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream text-charcoal antialiased;
+  }
+  ::selection {
+    @apply bg-wood-200 text-wood-900;
+  }
+}
+
+@layer components {
+  .container-wide {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-wood-700 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-wood-800 hover:shadow-soft focus:outline-none focus:ring-2 focus:ring-wood-400 focus:ring-offset-2;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-wood-300 bg-transparent px-6 py-3 text-sm font-medium text-wood-800 transition-all duration-300 hover:bg-wood-50;
+  }
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#1eb455] hover:shadow-soft;
+  }
+  .section-title {
+    @apply font-serif text-3xl font-semibold text-charcoal sm:text-4xl;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-wood-600;
+  }
+}
+
+/* Hide scrollbar for horizontal chip rows */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
