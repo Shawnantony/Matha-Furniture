@@ -32,10 +32,10 @@ export default function Navbar() {
     >
       <nav className="container-wide flex h-16 items-center justify-between sm:h-20">
         <Link href="/" className="flex flex-col leading-none">
-          <span className="font-serif text-xl font-bold text-wood-800 sm:text-2xl">
+          <span className="font-bahamas text-4xl uppercase leading-tight text-red-600 sm:text-5xl">
             Matha
           </span>
-          <span className="text-[10px] font-medium uppercase tracking-[0.3em] text-wood-500">
+          <span className="-mt-1 ml-10 font-bahamas text-xl uppercase tracking-wide text-red-500 sm:ml-12 sm:text-2xl">
             Furniture
           </span>
         </Link>

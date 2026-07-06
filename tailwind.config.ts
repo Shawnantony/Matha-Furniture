@@ -28,6 +28,7 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
         serif: ["var(--font-playfair)", "Georgia", "serif"],
+        bahamas: ['"Bauhaus 93"', "var(--font-bahamas)", "sans-serif"],
       },
       boxShadow: {
         soft: "0 10px 40px -15px rgba(85, 53, 38, 0.25)",
