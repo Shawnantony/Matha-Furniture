@@ -21,6 +21,7 @@ const bahamas = Fredoka({
   subsets: ["latin"],
   variable: "--font-bahamas",
   display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
