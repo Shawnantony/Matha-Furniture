@@ -403,6 +403,8 @@ export const sampleTestimonials: Testimonial[] = [
     quote:
       "The quality of our new sofa is exceptional. The team helped us pick the perfect fabric and delivery was on time. Highly recommended!",
     avatar: img("photo-1494790108377-be9c29b29330", 200),
+    approved: true,
+    created_at: "2024-01-05T00:00:00Z",
   },
   {
     id: "t-2",
@@ -412,6 +414,8 @@ export const sampleTestimonials: Testimonial[] = [
     quote:
       "Bought a complete bedroom set from Matha Furniture. Beautiful craftsmanship and honest pricing. Very happy with the experience.",
     avatar: img("photo-1500648767791-00dcc994a43e", 200),
+    approved: true,
+    created_at: "2024-01-10T00:00:00Z",
   },
   {
     id: "t-3",
@@ -421,6 +425,8 @@ export const sampleTestimonials: Testimonial[] = [
     quote:
       "Their dining table is the centrepiece of our home now. Excellent service and great after-sales support.",
     avatar: img("photo-1438761681033-6461ffad8d80", 200),
+    approved: true,
+    created_at: "2024-01-12T00:00:00Z",
   },
 ];
 
