@@ -14,10 +14,10 @@ export default async function Footer() {
       <div className="container-wide grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex flex-col items-center leading-tight text-center">
-            <span className="font-bahamas text-4xl uppercase text-white sm:text-5xl">
+            <span className="font-bahamas text-3xl uppercase leading-none text-white sm:text-5xl">
               Matha Furniture
             </span>
-            <span className="mt-1 text-[0.75rem] font-semibold uppercase tracking-[0.35em] text-wood-100 sm:text-sm sm:tracking-[0.45em]">
+            <span className="mt-1 text-[0.7rem] font-semibold uppercase tracking-[0.25em] text-wood-100 sm:text-sm sm:tracking-[0.45em]">
               Since 1966
             </span>
           </div>

@@ -33,12 +33,12 @@ export default function Navbar() {
       <nav className="container-wide flex h-16 items-center justify-between sm:h-20">
         <Link
           href="/"
-          className="flex flex-col items-center leading-tight text-center"
+          className="flex flex-col items-center px-2 text-center leading-tight"
         >
-          <span className="font-bahamas text-4xl uppercase text-red-600 sm:text-5xl">
+          <span className="font-bahamas text-3xl uppercase leading-none text-red-600 sm:text-5xl">
             Matha Furniture
           </span>
-          <span className="mt-1 text-[0.75rem] font-semibold uppercase tracking-[0.35em] text-charcoal sm:text-sm sm:tracking-[0.45em]">
+          <span className="mt-1 text-[0.7rem] font-semibold uppercase tracking-[0.25em] text-charcoal sm:text-sm sm:tracking-[0.45em]">
             Since 1966
           </span>
         </Link>
