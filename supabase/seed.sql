@@ -35,11 +35,10 @@ insert into banners (title, subtitle, image, cta_label, cta_href, active, sort_o
 ('Elevate Every Room','From cozy living rooms to elegant dining spaces — designed for modern homes.','https://images.unsplash.com/photo-1616137466211-f939a420be84?auto=format&fit=crop&w=2000&q=80','Visit Our Showrooms','/contact',true,2)
 on conflict do nothing;
 
--- Testimonials
-insert into testimonials (name, location, rating, quote, avatar) values
-('Anjali Menon','Kesavadasapuram',5,'The quality of our new sofa is exceptional. Highly recommended!','https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80'),
-('Rahul Nair','Pattom',5,'Bought a complete bedroom set from Matha Furniture. Beautiful craftsmanship and honest pricing.','https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80'),
-('Fathima Rasheed','Thiruvananthapuram',5,'Their dining table is the centrepiece of our home now. Excellent service.','https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80')
+insert into testimonials (name, location, rating, quote, avatar, approved) values
+('Anjali Menon','Kesavadasapuram',5,'The quality of our new sofa is exceptional. Highly recommended!','https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80', true),
+('Rahul Nair','Pattom',5,'Bought a complete bedroom set from Matha Furniture. Beautiful craftsmanship and honest pricing.','https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80', true),
+('Fathima Rasheed','Thiruvananthapuram',5,'Their dining table is the centrepiece of our home now. Excellent service.','https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80', true)
 on conflict do nothing;
 
 -- Gallery

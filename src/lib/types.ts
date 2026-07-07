@@ -50,6 +50,8 @@ export interface Testimonial {
   rating: number;
   quote: string;
   avatar: string;
+  approved: boolean;
+  created_at: string;
 }
 
 export interface ShowroomLocation {

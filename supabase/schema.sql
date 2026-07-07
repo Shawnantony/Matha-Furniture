@@ -64,7 +64,9 @@ create table if not exists testimonials (
   location text default '',
   rating int default 5,
   quote text default '',
-  avatar text default ''
+  avatar text default '',
+  approved boolean default false,
+  created_at timestamptz default now()
 );
 
 create table if not exists contact_info (

@@ -8,6 +8,7 @@ import {
   Tags,
   Images,
   GalleryHorizontalEnd,
+  MessageSquareQuote,
   Phone,
   LogOut,
   ExternalLink,
@@ -21,6 +22,7 @@ const links = [
   { href: "/admin/categories", label: "Categories", icon: Tags },
   { href: "/admin/banners", label: "Banners", icon: Images },
   { href: "/admin/gallery", label: "Gallery", icon: GalleryHorizontalEnd },
+  { href: "/admin/testimonials", label: "Testimonials", icon: MessageSquareQuote },
   { href: "/admin/contact", label: "Contact Info", icon: Phone },
 ];
 

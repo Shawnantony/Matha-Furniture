@@ -6,7 +6,6 @@ import {
   sampleContact,
   sampleGallery,
   sampleProducts,
-  sampleTestimonials,
 } from "./sample-data";
 import type {
   Banner,
@@ -35,6 +34,21 @@ export async function getCategories(): Promise<Category[]> {
     return data as Category[];
   } catch {
     return sampleCategories;
+  }
+}
+
+export async function getAllTestimonials(): Promise<Testimonial[]> {
+  if (!isSupabaseConfigured) return [];
+  try {
+    const supabase = createClient();
+    const { data, error } = await supabase
+      .from("testimonials")
+      .select("*")
+      .order("created_at", { ascending: false });
+    if (error || !data?.length) return [];
+    return data as Testimonial[];
+  } catch {
+    return [];
   }
 }
 
@@ -112,14 +126,18 @@ export async function getGallery(): Promise<GalleryImage[]> {
 }
 
 export async function getTestimonials(): Promise<Testimonial[]> {
-  if (!isSupabaseConfigured) return sampleTestimonials;
+  if (!isSupabaseConfigured) return [];
   try {
     const supabase = createClient();
-    const { data, error } = await supabase.from("testimonials").select("*");
-    if (error || !data?.length) return sampleTestimonials;
+    const { data, error } = await supabase
+      .from("testimonials")
+      .select("*")
+      .eq("approved", true)
+      .order("created_at", { ascending: false });
+    if (error || !data?.length) return [];
     return data as Testimonial[];
   } catch {
-    return sampleTestimonials;
+    return [];
   }
 }
 

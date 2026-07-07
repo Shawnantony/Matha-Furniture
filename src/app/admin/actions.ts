@@ -110,6 +110,44 @@ export async function deleteCategory(formData: FormData) {
   revalidatePath("/admin/categories");
 }
 
+/* ------------------------------ Testimonials ------------------------------ */
+
+export async function saveTestimonial(formData: FormData) {
+  const supabase = await getClient();
+  const id = formData.get("id") as string | null;
+  const payload = {
+    name: String(formData.get("name") || "").trim(),
+    location: String(formData.get("location") || "").trim(),
+    rating: Number(formData.get("rating") || 5),
+    quote: String(formData.get("quote") || "").trim(),
+    avatar: String(formData.get("avatar") || "").trim(),
+    approved: formData.get("approved") === "on",
+  };
+
+  if (id) {
+    const { error } = await supabase
+      .from("testimonials")
+      .update(payload)
+      .eq("id", id);
+    if (error) throw new Error(error.message);
+  } else {
+    const { error } = await supabase.from("testimonials").insert(payload);
+    if (error) throw new Error(error.message);
+  }
+
+  revalidateAll();
+  revalidatePath("/admin/testimonials");
+}
+
+export async function deleteTestimonial(formData: FormData) {
+  const supabase = await getClient();
+  const id = String(formData.get("id"));
+  const { error } = await supabase.from("testimonials").delete().eq("id", id);
+  if (error) throw new Error(error.message);
+  revalidateAll();
+  revalidatePath("/admin/testimonials");
+}
+
 /* ------------------------------ Banners ------------------------------ */
 
 export async function saveBanner(formData: FormData) {

@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
 import CategoryCard from "@/components/CategoryCard";
 import Testimonials from "@/components/Testimonials";
+import ShareExperienceForm from "@/components/ShareExperienceForm";
 import Reveal from "@/components/Reveal";
 import { whatsappLink } from "@/lib/site-config";
 import {
@@ -121,7 +122,7 @@ export default async function HomePage() {
               Two showrooms in the heart of Thiruvananthapuram
             </h2>
             <p className="mt-4 max-w-lg text-cream/75">
-              Experience our collections in person at Kesavadasapuram and Pattom.
+              Experience our collections in person at Kesavadasapuram and Plamoodu.
               Our team is ready to help you design a home you&apos;ll love.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
@@ -155,12 +156,31 @@ export default async function HomePage() {
       </section>
 
       {/* Testimonials */}
+      {testimonials.length > 0 && (
+        <section className="container-wide py-20">
+          <Reveal className="mb-12 text-center">
+            <span className="eyebrow">Loved by families</span>
+            <h2 className="section-title mt-2">What Our Customers Say</h2>
+          </Reveal>
+          <Testimonials items={testimonials} />
+        </section>
+      )}
+
+      {/* Share experience */}
       <section className="container-wide py-20">
-        <Reveal className="mb-12 text-center">
-          <span className="eyebrow">Loved by families</span>
-          <h2 className="section-title mt-2">What Our Customers Say</h2>
-        </Reveal>
-        <Testimonials items={testimonials} />
+        <div className="grid gap-10 lg:grid-cols-2">
+          <Reveal>
+            <div>
+              <span className="eyebrow">Share your story</span>
+              <h2 className="section-title mt-2">Tell others about Matha Furniture</h2>
+              <p className="mt-4 text-charcoal/70">
+                Recently purchased from us? We’d love to hear how your home feels now.
+                Send us a short review and, once approved, it will appear on this page.
+              </p>
+            </div>
+          </Reveal>
+          <ShareExperienceForm />
+        </div>
       </section>
 
       {/* CTA */}

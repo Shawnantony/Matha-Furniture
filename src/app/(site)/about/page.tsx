@@ -8,13 +8,13 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Matha Furniture - a trusted premium furniture showroom in Thiruvananthapuram, Kerala, with showrooms at Kesavadasapuram and Pattom.",
+    "Learn about Matha Furniture - a trusted premium furniture showroom in Thiruvananthapuram, Kerala, with showrooms at Kesavadasapuram and Plamoodu.",
 };
 
 const stats = [
   { icon: Sofa, value: "500+", label: "Furniture Designs" },
   { icon: Users, value: "10,000+", label: "Happy Customers" },
-  { icon: Award, value: "15+", label: "Years of Trust" },
+  { icon: Award, value: "50+", label: "Years of Trust" },
   { icon: Leaf, value: "2", label: "Showrooms" },
 ];
 
